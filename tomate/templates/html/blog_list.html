@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+<!--标题-->
+{% block head_extend %} 
+<title>主页</title> 
+
+<style>
+div.art_list:not(:last-child) {
+    padding-bottom: 2em;
+    margin-bottom: 1em;
+    border-bottom: 2px solid grey;
+}
+</style>
+{% endblock %}
+
+<!--显示的内荣-->
+{%  block content_extend %}
+<h1>博客列表</h1>
+
+{% for blog in blogs  %}
+<div class="art_list">
+    <h2><a href="{% url 'blog:blog_detail' blog.pk %}">{{ blog.title }}</a></h2>
+    <p>{{ blog.content|truncatechars:120  }}</p>
+</div>
+{% endfor %}
+
+{% endblock %}

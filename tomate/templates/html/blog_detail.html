@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+<!--拓展页面的开头-->
+{% block head_extend %} 
+    <title>{{ article.title }}</title> 
+
+    <!-- css样本配置 -->
+    <style>
+        .blog-title {
+            margin: 5px auto;
+            padding: 10px;     
+            text-align: center;       
+            border-bottom: 1px solid black;
+        }
+
+        .blog-title h2{
+           
+            padding-bottom: 1em;
+        }
+
+        .blog-info{
+            list-style-type: none;
+        }
+
+        .blog-info li {
+            display: inline-block;
+            margin: auto;
+            padding-right: 2em;
+
+        }
+        .blog-content article {
+            padding: 0.5em;
+            margin: 10px 5px;
+            text-indent: 2em;
+            white-space: pre-wrap;
+        }
+    </style>
+{% endblock %}
+
+<!--拓展内容-->
+{% block content_extend %}
+    <div class="blog-row">
+        <div class="blog-title">
+            <h2>{{ article.title }}</h2>
+            <ul class="blog-info">
+                <li>作者：{{ article.author }}</li>
+                <li>创建时间：{{ article.creat_time|date:"Y-m-d" }}</li>
+                <li>
+                    分类:<a href="#">{{ article.blog_type }}</a>
+                </li>
+            </ul>
+        </div>
+        <div class="blog-content">
+            <article>{{ article.content }}</article>
+        </div>
+    </div>
+{% endblock %}
