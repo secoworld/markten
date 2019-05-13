@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     /*font-family: Courier, 'Courier New', monospace;*/
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Lato", Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 body{
     background-color: #e4e4e4;
@@ -13,11 +13,12 @@ body{
  a {
      text-decoration: none;
  }
+
 .navbar {
     width: 90%;
     height: auto;
     margin: 5px auto;
-    background-color: #aaaebb;
+    background-color: white;
     padding: 20px;
     text-decoration-skip: 10px;
     border-bottom: 9px solid #e8f3ec;
@@ -61,6 +62,7 @@ body{
     width: 65%;
     padding: 15px;
     background-color: white;
+    border-radius: 10px;
 }
 
 .middle .right {
@@ -70,6 +72,7 @@ body{
     width: 25%;
     padding: 15px;
     background-color: white;
+    border-radius: 10px;
 }
 
 .middle .clear {

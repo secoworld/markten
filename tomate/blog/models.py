@@ -20,6 +20,7 @@ class Article(models.Model):
     content = models.TextField()
     blog_type =  models.ForeignKey(BlogType, on_delete=models.DO_NOTHING) 
 
+
     #显示字符的内容
     def __str__(self):
         return self.title
